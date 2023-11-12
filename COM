@@ -1,0 +1,16 @@
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 52217
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;WWW.LYNN_WONDERLAND.		IN	A
+
+;; Query time: 18 msec
+;; SERVER: 192.168.1.1#53(192.168.1.1)
+;; WHEN: Sun Nov 12 23:36:07 ;; MSG SIZE  rcvd: 37
+
+;_nostats.			IN	A
+;; Query time: 26 msec
+;; SERVER: 192.168.1.1#53(192.168.1.1)
+;; WHEN: Sun Nov 12 23:36:07 ;; MSG SIZE  rcvd: 26
+
