@@ -85,3 +85,34 @@
                 width: 100%;
                 height: auto;
             }
+            
+            .title-container {
+                width: 100vw;
+                /* 视口宽度 */
+                text-align: center;
+                /* 文本居中 */
+            }
+            
+            .gallery-title {
+                font-style: italic;
+                /* 斜体 */
+            }
+            
+            .image-gallery {
+                display: flex;
+                align-items: flex-end;
+                /* 底端对齐 */
+                overflow-x: auto;
+                /* 水平滚动 */
+                padding: 20px;
+                gap: 10px;
+                width: 100vw;
+                /* 图片之间的间隙 */
+            }
+            
+            .image-gallery img {
+                width: 400px;
+                /* 设置固定宽度 */
+                height: auto;
+                /* 高度自动，保持长宽比 */
+            }
