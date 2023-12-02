@@ -1,118 +1,123 @@
-            body {
-                font-family: 'Arial', sans-serif;
-                margin: 10px;
-                padding: 0;
-                background: #f4f4f4;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                /* 水平居中 */
-                align-items: center;
-                /* 垂直居中 */
-                /* 视口的全高度 */
-                text-align: center;
-            }
-            
-            .big-title {
-                font-size: 60px;
-                margin: 10px;
-            }
-            
-            .intro-card {
-                background: white;
-                border-radius: 10px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                display: flex;
-                align-items: center;
-                padding: 20px;
-                max-width: 600px;
-                margin: auto;
-            }
-            
-            header img {
-                width: 100%;
-                height: auto;
-                object-fit: contain;
-            }
-            
-            .text-section {
-                padding-right: 20px;
-                max-width: 400px;
-                /* Set a maximum width for text wrapping */
-                word-wrap: break-word;
-                /* Ensures long words will wrap and not overflow */
-            }
-            
-            .intro-photo {
-                width: 400px;
-                /* 宽度和高度相同 */
-                height: 150px;
-                /* 宽度和高度相同 */
-                border-radius: 50%;
-                /* 圆形 */
-                object-fit: cover;
-                margin-right: 20px;
-            }
-            
-            .intro-text h2 {
-                margin: 0 0 10px 0;
-            }
-            
-            .intro-text p {
-                margin: 0;
-            }
-            
-            button {
-                margin-top: 20px;
-                padding: 10px 20px;
-                font-size: 16px;
-            }
-            
-            section {
-                margin-bottom: 20px;
-                /* 添加底部外边距以分隔各个 section */
-            }
-            
-            .video-container {
-                width: 80%;
-                /* Adjust as needed */
-                max-width: 640px;
-                /* Adjust as needed */
-                margin: 20px auto;
-            }
-            
-            video {
-                width: 100%;
-                height: auto;
-            }
-            
-            .title-container {
-                width: 100vw;
-                /* 视口宽度 */
-                text-align: center;
-                /* 文本居中 */
-            }
-            
-            .gallery-title {
-                font-style: italic;
-                /* 斜体 */
-            }
-            
-            .image-gallery {
-                display: flex;
-                align-items: flex-end;
-                /* 底端对齐 */
-                overflow-x: auto;
-                /* 水平滚动 */
-                padding: 20px;
-                gap: 10px;
-                width: 100vw;
-                /* 图片之间的间隙 */
-            }
-            
-            .image-gallery img {
-                width: 400px;
-                /* 设置固定宽度 */
-                height: auto;
-                /* 高度自动，保持长宽比 */
-            }
+                body {
+                    font-family: 'Times New Roman';
+                    margin: 10px;
+                    padding: 0;
+                    background: #f4f4f4;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    /* 水平居中 */
+                    align-items: center;
+                    /* 垂直居中 */
+                    /* 视口的全高度 */
+                    text-align: center;
+                }
+                
+                .big-title {
+                    font-size: 60px;
+                    margin: 10px;
+                }
+                
+                .intro-card {
+                    background: white;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    max-width: 600px;
+                    margin: auto;
+                }
+                
+                header img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+                
+                .text-section {
+                    padding-right: 20px;
+                    max-width: 400px;
+                    /* Set a maximum width for text wrapping */
+                    word-wrap: break-word;
+                    /* Ensures long words will wrap and not overflow */
+                }
+                
+                .intro-photo {
+                    width: 400px;
+                    /* 宽度和高度相同 */
+                    height: 150px;
+                    /* 宽度和高度相同 */
+                    border-radius: 50%;
+                    /* 圆形 */
+                    object-fit: cover;
+                    margin-right: 20px;
+                }
+                
+                .intro-text h2 {
+                    margin: 0 0 10px 0;
+                }
+                
+                .intro-text p {
+                    margin: 0;
+                }
+                
+                .portfolio-title {
+                    font-size: 80px;
+                }
+                
+                button {
+                    margin-top: 20px;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                }
+                
+                section {
+                    margin-bottom: 20px;
+                    /* 添加底部外边距以分隔各个 section */
+                }
+                
+                .video-container {
+                    width: 80%;
+                    /* Adjust as needed */
+                    max-width: 640px;
+                    /* Adjust as needed */
+                    margin: 20px auto;
+                }
+                
+                video {
+                    width: 100%;
+                    height: auto;
+                }
+                
+                .title-container {
+                    width: 100vw;
+                    /* 视口宽度 */
+                    text-align: center;
+                    /* 文本居中 */
+                }
+                
+                .gallery-title {
+                    font-style: italic;
+                    font-size: 80px;
+                    /* 斜体 */
+                }
+                
+                .image-gallery {
+                    display: flex;
+                    align-items: flex-end;
+                    /* 底端对齐 */
+                    overflow-x: auto;
+                    /* 水平滚动 */
+                    padding: 20px;
+                    gap: 10px;
+                    width: 100vw;
+                    /* 图片之间的间隙 */
+                }
+                
+                .image-gallery img {
+                    width: 400px;
+                    /* 设置固定宽度 */
+                    height: auto;
+                    /* 高度自动，保持长宽比 */
+                }
