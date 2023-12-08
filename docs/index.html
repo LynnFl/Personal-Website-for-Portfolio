@@ -5,32 +5,75 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>My Portfolio</title>
     <script src="script.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Draco is free PSD &amp; HTML template by @afnizarnur">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/kube.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.min.css" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        .intro h1:before {
+            /* Edit this with your name or anything else */
+            content: 'LYNN';
+        }
+    </style>
 
 </head>
 
 <body>
+    <div class="main-nav">
+        <div class="container">
+            <header class="group top-nav">
+                <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+                    <span class="logo">LYNN</span>
+                </div>
+                <nav id="navbar-1" class="navbar item-nav">
+                    <ul>
+                        <li class="active"><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#sketches">Sketches Gallery</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
 
     <header>
         <img id="headerImage" src="header-image.jpg" alt="Header Image">
     </header>
-    <div class="w">
 
-        <div class="ln">
-            <img src="./Images/ln.png" alt="" class="left">
-            <div class="p left">
-                <p style="font-size: 20px;"> Personal Introduction</p>
-                <p>Hi, my name is Fangling Wu.</p>
-                <p>I live in Nanjing, China.</p>
-                <p>Welcome to my inner world.</p>
+    <div class="intro section" id="about">
+        <div class="container">
+            <p>Hi, I’m Lynn, Fangling Wu</p>
+            <div class="units-row units-split wrap">
+                <div class="unit-20">
+                    <img src="./Images/ln.png" alt="Avatar">
+                </div>
+                <div class="unit-80">
+                    <h1>I live in<br><span id="typed"></span></h1>
+                </div>
+                <p>
+                    I am a EE student interested in art and games. Now I live in Nanjing, China.
+                </p>
             </div>
         </div>
-        <div class="prefect">
+    </div>
+    <div class="w">
+
+        <div class="prefect" id="portfolio">
             Portfolio
         </div>
         <h2 class="portfolio-title ">Project1</h2>
         <div class="video">
             <div>
-                <iframe src="https://player.vimeo.com/video/890525701?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479 " frameborder="0 " allow="autoplay" class="right "></iframe></div>
+                <iframe src="https://player.vimeo.com/video/890525701?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="400" height="225" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="2" class="right"></iframe></div>
             <script src="https://player.vimeo.com/api/player.js "></script>
 
             <div class="p right ">
@@ -44,7 +87,7 @@
 
             <div class="perfect">
                 <h2 class="portfolio-title ">Project2</h2>
-                <iframe src="https://player.vimeo.com/video/892297848?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="400" height="225" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="我的影片 7"></iframe>
+                <iframe src="https://player.vimeo.com/video/892297848?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="400" height="225" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="我的影片 7" display="flex"></iframe>
 
             </div>
 
@@ -58,7 +101,7 @@
             </div>
 
 
-            <div class="title-container ">
+            <div class="title-container" id="sketches">
                 <h2 class="gallery-title ">Sketches</h2>
 
                 <p>
@@ -80,6 +123,98 @@
                 <!-- 更多图片 -->
             </div>
         </main>
+
+
+
+        <!-- Work Experience -->
+        <div class="work section second" id="experiences">
+            <div class="container">
+                <h1>School<br>Experiences</h1>
+                <ul class="work-list">
+                    <li>2014-2017</li>
+                    <li>Changzhou Foreign Language School, Jiangsu, China</li>
+                </ul>
+                <ul class="work-list">
+                    <li>2017-2020</li>
+                    <li>Changzhou Senior High School of Jiangsu Province, China</li>
+                </ul>
+                <ul class="work-list">
+                    <li>2020-2024</li>
+                    <li>Nanjing University, Jiangsu, China</li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Technical Skills -->
+        <div class="skills section second" id="skills">
+            <div class="container">
+                <h1>Technical<br>Skills</h1>
+                <ul class="skill-list list-flat">
+                    <li>Programming Skills</li>
+                    <li>C#/ C / C++ / HTML / CSS / Unity3D / UE5</li>
+                </ul>
+                <ul class="skill-list list-flat">
+                    <li>Other Skills</li>
+                    <li>Maya / Photoshop / Illustrator/ Zbrush / Substance Painter</li>
+                </ul>
+                <ul class="skill-list list-flat">
+                    <li>Languages</li>
+                    <li>Chinese(native) / English / Japanese / Latin</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Quote -->
+        <div class="quote">
+            <div class="container text-centered">
+                <h1>fight against the ugliness.</h1>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="units-row">
+                    <div class="unit-50">
+                        <p>Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+                    </div>
+                    <div class="unit-50">
+                        <ul class="social list-flat right">
+                            <li><a href="#"><i class="fa fa-send"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Javascript -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/typed.min.js"></script>
+        <script src="js/kube.min.js"></script>
+        <script src="js/site.js"></script>
+        <script>
+            function newTyped() {}
+            $(function() {
+                $("#typed").typed({
+                    // Change to edit type effect
+                    strings: ["wonderland", "the end of the world", "beauty of life"],
+
+                    typeSpeed: 90,
+                    backDelay: 700,
+                    contentType: "html",
+                    loop: !0,
+                    resetCallback: function() {
+                        newTyped()
+                    }
+                }), $(".reset").click(function() {
+                    $("#typed").typed("reset")
+                })
+            });
+        </script>
         <footer>
             <p>&copy; 2023 Fangling Wu</p>
         </footer>
