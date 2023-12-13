@@ -147,6 +147,10 @@
                     float: right;
                 }
                 
+                .center {
+                    float: center
+                }
+                
                 .w {
                     width: 100vw;
                     margin: 0 auto;
