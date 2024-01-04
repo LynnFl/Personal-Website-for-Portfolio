@@ -26,25 +26,24 @@ window.addEventListener('resize', adjustTitleSize);
 adjustTitleSize();
 
 
-let lastClickedTriangleContainer = null;
+let lastClickedTrianglePos = null; // 记录最后点击的小三角位置
 
 function toggleImages(containerId, triangleContainer) {
     var container = document.getElementById(containerId);
     var closeButton = document.getElementById("closeButton");
     var triangle = triangleContainer.querySelector(".triangle");
 
-    var containers = document.querySelectorAll(".imageContainer");
     var wasVisible = !container.classList.contains("hide");
 
     // 关闭所有图片并重置三角形方向
-    containers.forEach(c => c.classList.add("hide"));
+    document.querySelectorAll(".imageContainer").forEach(c => c.classList.add("hide"));
     document.querySelectorAll(".triangle").forEach(t => t.innerHTML = "▼");
 
     if (!wasVisible) {
         container.classList.remove("hide");
         triangle.innerHTML = "▲";
         closeButton.style.display = "block"; // 显示收起按钮
-        lastClickedTriangleContainer = triangleContainer; // 记录点击的三角容器
+        lastClickedTrianglePos = triangleContainer.getBoundingClientRect().top + window.scrollY; // 记录位置
     } else {
         closeButton.style.display = "none"; // 隐藏收起按钮
     }
@@ -55,8 +54,8 @@ function closeImages() {
     document.querySelectorAll(".triangle").forEach(t => t.innerHTML = "▼");
     document.getElementById("closeButton").style.display = "none"; // 隐藏收起按钮
 
-    if (lastClickedTriangleContainer) {
-        lastClickedTriangleContainer.scrollIntoView({ behavior: 'smooth' });
-        lastClickedTriangleContainer = null;
+    if (lastClickedTrianglePos !== null) {
+        window.scrollTo({ top: lastClickedTrianglePos, behavior: 'smooth' });
+        lastClickedTrianglePos = null;
     }
 }

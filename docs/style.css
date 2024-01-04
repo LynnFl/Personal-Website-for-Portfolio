@@ -173,12 +173,6 @@
                     float: center
                 }
                 
-                .w {
-                    width: 100vw;
-                    margin: 0 auto;
-                    background-color: #fff;
-                }
-                
                 .video2 {
                     float: left;
                     padding-left: 2rem;
