@@ -26,29 +26,38 @@ window.addEventListener('resize', adjustTitleSize);
 adjustTitleSize();
 
 
-function toggleImages() {
-    var container = document.getElementById("imageContainer");
-    var closeButton = document.getElementById("closeButton");
-    var triangle = document.getElementById("triangle");
+let lastClickedTriangle = null; // 用于记录最后点击的小三角
 
-    if (container.classList.contains("hide")) {
-        container.classList.remove("hide");
-        closeButton.classList.remove("hide"); // 显示收起按钮
-        triangle.innerHTML = "▲"; // 改为倒三角
-    } else {
-        container.classList.add("hide");
-        closeButton.classList.add("hide"); // 隐藏收起按钮
-        triangle.innerHTML = "▼"; // 改回正三角
+function toggleImages(containerId, triangle) {
+    var container = document.getElementById(containerId);
+    var closeButton = document.getElementById("closeButton");
+
+    // 切换图片容器的显示状态
+    container.classList.toggle("hide");
+
+    // 切换三角形方向
+    triangle.innerHTML = container.classList.contains("hide") ? "▼" : "▲";
+
+    // 根据容器状态显示或隐藏收起按钮
+    closeButton.style.display = container.classList.contains("hide") ? "none" : "block";
+
+    // 记录最后点击的小三角
+    if (!container.classList.contains("hide")) {
+        lastClickedTriangle = triangle;
     }
 }
 
-function closeImagesAndScrollToTriangle() {
-    var triangle = document.getElementById("triangle");
-    var container = document.getElementById("imageContainer");
-    var closeButton = document.getElementById("closeButton");
+function closeImages() {
+    document.querySelectorAll(".imageContainer").forEach(container => {
+        container.classList.add("hide");
+    });
+    document.querySelectorAll(".triangle").forEach(triangle => {
+        triangle.innerHTML = "▼";
+    });
+    document.getElementById("closeButton").style.display = "none";
 
-    container.classList.add("hide");
-    closeButton.classList.add("hide");
-    triangle.innerHTML = "▼";
-    triangle.scrollIntoView({ behavior: 'smooth' });
+    // 如果有记录的最后点击的小三角，则滚动回该位置
+    if (lastClickedTriangle) {
+        lastClickedTriangle.scrollIntoView({ behavior: 'smooth' });
+    }
 }

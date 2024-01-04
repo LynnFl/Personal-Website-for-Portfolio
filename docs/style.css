@@ -255,30 +255,28 @@
                     font-size: 25px;
                 }
                 
-                #triangle {
+                .triangle {
                     cursor: pointer;
-                    text-align: center;
-                    font-size: 24px;
+                    /* 其他样式 */
                 }
                 
-                #imageContainer img {
-                    width: auto;
-                    /* 或你希望的尺寸 */
-                    height: auto;
-                    margin: 5px;
-                }
-                
-                .hide {
+                .imageContainer.hide {
                     display: none;
+                }
+                
+                .imageContainer {
+                    width: auto;
+                    height: auto;
                 }
                 
                 #closeButton {
                     position: fixed;
                     /* 固定位置 */
-                    bottom: 20px;
-                    /* 距离底部的位置 */
                     right: 20px;
-                    /* 距离右侧的位置 */
-                    padding: 10px 20px;
-                    cursor: pointer;
+                    /* 距离右边的距离 */
+                    bottom: 20px;
+                    /* 距离底部的距离 */
+                    display: none;
+                    /* 初始状态隐藏 */
+                    /* 添加其他按钮样式，如背景色、边框等 */
                 }
