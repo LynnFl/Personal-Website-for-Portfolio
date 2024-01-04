@@ -51,5 +51,5 @@ function closeImages() {
     document.getElementById("closeButton").style.display = "none"; // 隐藏收起按钮
 
     // 滚动回页面最上方
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 800, behavior: 'smooth' });
 }

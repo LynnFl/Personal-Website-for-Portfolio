@@ -124,7 +124,7 @@
                 }
                 
                 .video {
-                    height: 300px;
+                    height: 350px;
                     padding: 15px;
                     background-color: rgb(247, 247, 247);
                 }
@@ -256,15 +256,15 @@
                 
                 .text {
                     /* 文字样式 */
-                    margin-top: 5%;
-                    color: #4e4e4e;
+                    color: #dba848;
                     font-size: 16px;
                 }
                 
                 .triangle {
                     cursor: pointer;
+                    color: #dba848;
                     /* 其他样式 */
-                    font-size: 24px;
+                    font-size: 26px;
                     /* 放大三角形 */
                     margin-right: 8px;
                 }
