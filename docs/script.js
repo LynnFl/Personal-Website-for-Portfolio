@@ -26,38 +26,37 @@ window.addEventListener('resize', adjustTitleSize);
 adjustTitleSize();
 
 
-let lastClickedTriangle = null; // 用于记录最后点击的小三角
+let lastClickedTriangleContainer = null;
 
-function toggleImages(containerId, triangle) {
+function toggleImages(containerId, triangleContainer) {
     var container = document.getElementById(containerId);
     var closeButton = document.getElementById("closeButton");
+    var triangle = triangleContainer.querySelector(".triangle");
 
-    // 切换图片容器的显示状态
-    container.classList.toggle("hide");
+    var containers = document.querySelectorAll(".imageContainer");
+    var wasVisible = !container.classList.contains("hide");
 
-    // 切换三角形方向
-    triangle.innerHTML = container.classList.contains("hide") ? "▼" : "▲";
+    // 关闭所有图片并重置三角形方向
+    containers.forEach(c => c.classList.add("hide"));
+    document.querySelectorAll(".triangle").forEach(t => t.innerHTML = "▼");
 
-    // 根据容器状态显示或隐藏收起按钮
-    closeButton.style.display = container.classList.contains("hide") ? "none" : "block";
-
-    // 记录最后点击的小三角
-    if (!container.classList.contains("hide")) {
-        lastClickedTriangle = triangle;
+    if (!wasVisible) {
+        container.classList.remove("hide");
+        triangle.innerHTML = "▲";
+        closeButton.style.display = "block"; // 显示收起按钮
+        lastClickedTriangleContainer = triangleContainer; // 记录点击的三角容器
+    } else {
+        closeButton.style.display = "none"; // 隐藏收起按钮
     }
 }
 
 function closeImages() {
-    document.querySelectorAll(".imageContainer").forEach(container => {
-        container.classList.add("hide");
-    });
-    document.querySelectorAll(".triangle").forEach(triangle => {
-        triangle.innerHTML = "▼";
-    });
-    document.getElementById("closeButton").style.display = "none";
+    document.querySelectorAll(".imageContainer").forEach(c => c.classList.add("hide"));
+    document.querySelectorAll(".triangle").forEach(t => t.innerHTML = "▼");
+    document.getElementById("closeButton").style.display = "none"; // 隐藏收起按钮
 
-    // 如果有记录的最后点击的小三角，则滚动回该位置
-    if (lastClickedTriangle) {
-        lastClickedTriangle.scrollIntoView({ behavior: 'smooth' });
+    if (lastClickedTriangleContainer) {
+        lastClickedTriangleContainer.scrollIntoView({ behavior: 'smooth' });
+        lastClickedTriangleContainer = null;
     }
 }

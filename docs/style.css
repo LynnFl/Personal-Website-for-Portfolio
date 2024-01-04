@@ -255,9 +255,24 @@
                     font-size: 25px;
                 }
                 
+                .game-documents {
+                    background-color: rgb(247, 247, 247);
+                    height: 60px;
+                }
+                
+                .text {
+                    /* 文字样式 */
+                    margin-top: 5%;
+                    color: #4e4e4e;
+                    font-size: 16px;
+                }
+                
                 .triangle {
                     cursor: pointer;
                     /* 其他样式 */
+                    font-size: 24px;
+                    /* 放大三角形 */
+                    margin-right: 8px;
                 }
                 
                 .imageContainer.hide {
@@ -277,6 +292,11 @@
                     bottom: 20px;
                     /* 距离底部的距离 */
                     display: none;
+                    color: white;
+                    border: 1px solid #FB8F3D;
+                    background: -webkit-linear-gradient(top, #FDA251, #FB8F3D);
+                    background: -moz-linear-gradient(top, #FDA251, #FB8F3D);
+                    background: -ms-linear-gradient(top, #FDA251, #FB8F3D);
                     /* 初始状态隐藏 */
                     /* 添加其他按钮样式，如背景色、边框等 */
                 }
