@@ -254,3 +254,31 @@
                     line-height: 100px;
                     font-size: 25px;
                 }
+                
+                #triangle {
+                    cursor: pointer;
+                    text-align: center;
+                    font-size: 24px;
+                }
+                
+                #imageContainer img {
+                    width: auto;
+                    /* 或你希望的尺寸 */
+                    height: auto;
+                    margin: 5px;
+                }
+                
+                .hide {
+                    display: none;
+                }
+                
+                #closeButton {
+                    position: fixed;
+                    /* 固定位置 */
+                    bottom: 20px;
+                    /* 距离底部的位置 */
+                    right: 20px;
+                    /* 距离右侧的位置 */
+                    padding: 10px 20px;
+                    cursor: pointer;
+                }
